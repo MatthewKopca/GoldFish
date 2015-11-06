@@ -1,5 +1,5 @@
 # cs3365
 
-New Repository for Project 2.  
+This is no longer valid.  Please see GoldFish2
     
     
