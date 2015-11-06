@@ -27,7 +27,7 @@ public class API_Getter extends AppCompatActivity {
     private ArrayList<Story> stories = new ArrayList<>();
     private String title_url = "https://hacker-news.firebaseio.com/v0/item/";
     private ListView topList;
-
+    int nothing = 0;
     public API_Getter(ListView view){
         this.topList = view;
         topAdapter = new StoryListAdapter(topList.getContext(), R.layout.list_item, stories);
