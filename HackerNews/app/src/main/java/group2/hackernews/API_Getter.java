@@ -5,6 +5,7 @@ import android.content.DialogInterface;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ListView;
 
+
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
@@ -34,7 +35,7 @@ public class API_Getter extends AppCompatActivity {
 
     //Gets the JSON Array filled with article ID's depending on the type of post.  ie Top, Show, Ask...
     public void use_url_to_get_IDArray_then_process(String source) {
-        JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Request.Method.GET, source, null, new Response.Listener<JSONArray>() {
+        JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Request.Method.GET, source, "", new Response.Listener<JSONArray>() {
             @Override
             public void onResponse(JSONArray response) {
                 //uses the id list to make a call to get detailed post info
@@ -68,7 +69,7 @@ public class API_Getter extends AppCompatActivity {
     //Gets a JSON Object from HackerNews and populates the list.
     public void get_JSON_from_HN_and_set_UI_elements(String id){
         String uri = title_url + id + ".json";
-        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, uri, null, new Response.Listener<JSONObject>() {
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, uri,"", new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
                 //get the list ready to populate
